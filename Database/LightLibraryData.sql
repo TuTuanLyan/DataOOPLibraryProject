@@ -50,10 +50,7 @@ CREATE TABLE requiredBooks (
     # nếu đặt foreign key, sẽ báo lỗi
 );
 
-CREATE TRIGGER SetDefaultDueDate
-BEFORE INSERT ON transactions
-FOR EACH ROW
-SET NEW.dueDate = DATE_ADD(NOW(),INTERVAL 30 DAY);
+
 
 # mặc định role sẽ là customer, admin thì sẽ được cấp riêng tài khoản 
 insert into users (userName,email,password,role) values ("NTAT","ntat@gmail.com","ntat","ADMIN");

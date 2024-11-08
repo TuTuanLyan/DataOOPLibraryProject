@@ -11,7 +11,6 @@ select f.*,b.title,b.author,b.publisher,b.publishedDate,b.thumbnail from favorit
 left join books b on b.isbn = f.isbn;
 
 #delete from favoriteBooks where userID = ? and ISBN = ?; :> dùng để remove khỏi favoriteBooks
-
 select * from requiredBooks;
 
 select * from users;
